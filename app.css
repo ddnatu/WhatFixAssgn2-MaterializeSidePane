@@ -1,0 +1,125 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    /* //background-color: red; */
+}
+
+.burgerMenu{
+    display: none;
+}
+.closeMenu {
+    display: none;
+    float: right;
+    padding: 5%;
+    background-color: #e9ecec;
+}
+
+.main{
+    background-color: #ee6e73;
+    padding: 5%;
+}
+.sidenav {
+    height: 100%;
+    width: calc(100%/4);
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    padding-top: 20px;
+    background-color: #ffffff;
+    box-shadow: 2px 2px 5px #888888;    
+    
+}
+
+.sidenav a {
+    padding: 6px 6px 6px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    background: linear-gradient(to right, #FFF 50%, #26a69a 50%);
+    background-size: 200% 100%;
+    background-position:left bottom;
+    transition:all 0.5s ease;
+}
+
+.submenuContainer{
+    margin-left: 10%;
+}
+
+.materializeIcon{
+    text-align: center;
+    margin-top: 32px;
+    margin-bottom: 80px;
+    font-size: 1.1rem;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.main {
+    margin-left: calc(100%/4); /* Same as the width of the sidenav */
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+  .sidenav {display:none;}  
+  .burgerMenu {display:block;}
+  .main {margin-left: 0;}
+}
+@media screen and (max-width: 800px) {
+    /* .sidenav {display:none;}   */
+    .sidenav {margin-left:-2000px;}      
+    .burgerMenu {display:block;}
+    .main {margin-left: 0;}
+}
+@media screen and (min-width: 800px) {
+    /* .sidenav {display:block;}   */
+    .sidenav {margin-left:0;}  
+    .burgerMenu {display:none;}
+    .main {margin-left: calc(100%/4);}
+}
+.label :hover{
+    background-color: rgba(0,0,0,0.05);
+}
+.searchWrapper{
+    margin: 5% 5%;
+    transition: margin .25 ease;
+    position: relative;
+    background-color: #FFF;
+    border-radius: 2px;
+    box-shadow: 2px 2px #888888; 
+    -webkit-box-shadow: 0 8px 6px -6px #888888;
+    -moz-box-shadow: 0 8px 6px -6px #888888;
+    box-shadow: 0 8px 6px -6px #888888;  }
+
+.searchMenu{
+    /* display: block; */
+    font-size: 16px;
+    font-weight: 300;
+    width: 75%;
+    height: 45px;
+    margin: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0 45px 0 15px;
+    border: 0;
+    border-radius: 2px;
+    border-right-style: none;    
+}
+
+.cssCollapse + input {
+    display: none;
+}
+.cssCollapse + input + .submenuContainer {
+    display: none;
+}
+.cssCollapse + input[type=checkbox]:checked + div {
+    display: block;
+}
